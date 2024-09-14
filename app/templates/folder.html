@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='notes.css') }}" />
+{% endblock %} {% block content %}
+<div class="container">
+  <h1>{{ folder.name }}</h1>
+  <form method="POST" class="note-form">
+    <textarea name="content" placeholder="Add a new note" required></textarea>
+    <button type="submit" class="btn">Add Note</button>
+  </form>
+  <ul class="notes-list">
+    {% for note in notes %}
+    <li class="note-item" id="note-{{ note.id }}">
+      <p>
+        {{ note.content[:100] | safe | nl2br }}{% if note.content|length > 100
+        %}...{% endif %}
+        <a href="{{ url_for('workout.view_note', id=note.id) }}">Read More</a>
+      </p>
+      <div class="note-actions">
+        <a
+          href="{{ url_for('workout.edit_note', id=note.id) }}"
+          class="btn edit-btn"
+          >Edit</a
+        >
+        <form
+          method="POST"
+          action="{{ url_for('workout.delete_note', id=note.id) }}"
+          style="display: inline"
+        >
+          <button type="submit" class="btn delete-btn">Delete</button>
+        </form>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

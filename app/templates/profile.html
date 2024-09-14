@@ -1,0 +1,7 @@
+{% extends "base.html"%} {% block head%} {{super()}}
+<link
+  rel="stylesheet"
+  href="{{url_for('static',filename='login.css')}}"
+/>{%endblock%}{% block content%}
+<h1>{{mes}}</h1>
+{% endblock %}

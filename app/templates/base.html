@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='base.css') }}"
+    />
+    {% endblock %}</head
+  ><style>
+    .folder-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .delete-folder-form {
+      margin: 0;
+    }
+
+    .delete-button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .delete-button:hover {
+      background-color: darkred;
+    }
+  </style>
+
+  <body>
+    <div class="navbar">
+      <ul class="left-items">
+        <li><h1>My Note Book</h1></li>
+        {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('workout.notes') }}">My Notes</a></li>
+        {% endif %}
+      </ul>
+      <ul class="right-items">
+        {% if current_user.is_authenticated %}
+        <li>
+          <a href="{{ url_for('auth.logout') }}" class="logout-btn">Logout</a>
+        </li>
+        {% else %}
+        <li><a href="{{ url_for('auth.signup') }}">SignUp</a></li>
+        <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
+</html>

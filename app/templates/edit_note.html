@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='edit_note.css') }}"
+/>
+{% endblock %} {% block content %}
+<div class="edit-note-container">
+  <h1>Edit Note</h1>
+  <form method="POST" class="note-form">
+    <textarea name="content" required>{{ note.content }}</textarea>
+    <button type="submit" class="btn">Update Note</button>
+  </form>
+</div>
+{% endblock %}

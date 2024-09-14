@@ -1,0 +1,147 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.folder-form,
+.note-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.folder-form input,
+.note-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.folder-form .btn,
+.note-form .btn {
+  align-self: center;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.folder-form .btn:hover,
+.note-form .btn:hover {
+  background-color: #0056b3;
+}
+
+.folders-list,
+.notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.folder-item,
+.note-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.folder-item a,
+.note-item a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.folder-item a:hover,
+.note-item a:hover {
+  text-decoration: underline;
+}
+
+.note-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.note-actions .btn {
+  padding: 5px 10px;
+  font-size: 0.9em;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.note-actions .btn:hover {
+  background-color: #218838;
+}
+
+.note-actions .delete-btn {
+  background-color: #dc3545;
+}
+
+.note-actions .delete-btn:hover {
+  background-color: #c82333;
+}
+
+.folder-item,
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.delete-folder-form,
+.delete-note-form {
+  margin: 0;
+}
+
+.note-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.edit-button {
+  background-color: blue;
+}
+
+.edit-button:hover {
+  background-color: darkblue;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}

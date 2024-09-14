@@ -1,0 +1,86 @@
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f4f8; /* Light background for readability */
+  margin: 0;
+  padding: 0;
+}
+
+.edit-note-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #ffffff; /* White background for note area */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.note-form textarea {
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  border: 2px solid #d1d9e6;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  resize: vertical;
+  color: #333;
+  background-color: #f9fafc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.note-form textarea:focus {
+  border-color: #5065f2; /* Accent color when focused */
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.note-form .btn {
+  background-color: #5065f2;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.note-form .btn:hover {
+  background-color: #4152d0; /* Darken on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.note-form .btn:active {
+  background-color: #2f3fa3; /* Darker color on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .edit-note-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .note-form textarea {
+    height: 150px;
+  }
+}

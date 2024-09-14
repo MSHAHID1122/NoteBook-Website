@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block head %} {{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='all_users.css')}}" />
+{%endblock%} {%block content%}
+<table>
+  <thead>
+    <td>NAME</td>
+    <td>EMAIL</td>
+    <td>PASSWORD</td>
+  </thead>
+  {% for r in rows %}
+  <tr>
+    <td>{{ r['name']}}</td>
+    <td>{{ r['email']}}</td>
+    <td>{{ r['password']}}</td>
+  </tr>
+  {%endfor%}
+</table>
+{% endblock%}

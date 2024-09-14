@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='notes.css') }}" />
+{% endblock %} {% block content %}
+<div class="container">
+  <h1>View Note</h1>
+  <pre>{{ note.content | nl2br }}</pre>
+  <a href="{{ url_for('workout.notes') }}" class="btn">Back to Notes</a>
+</div>
+{% endblock %}

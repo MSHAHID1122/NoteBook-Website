@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block head %} {{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='base1.css')}}" />
+{%endblock%} {% block content%}
+<h1 style="margin-left: 40px">Hello !!</h1>
+<img
+  style="display: block; margin-left: auto; margin-right: auto"
+  src="{{url_for('static',filename='/pushup.png')}}"
+  alt="push up"
+  height="200px"
+/>
+<p style="margin-left: 40px">
+  Welcome to Push up calculator .. <br />
+  here you can count your daily push ups
+</p>
+{% endblock %}
